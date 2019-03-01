@@ -1,0 +1,255 @@
+[
+    {
+        "Name": "Honey Garlic Shrimp and Broccoli",
+        "Ingredients" : [
+            "Broccoli",
+            "Shrimp",
+            "Honey",
+            "Soy Sauce",
+            "Garlic",
+            "Lemon",
+            "Butter"
+        ],
+        "Recipe" : [
+            "1/2 cup honey, 1/4 cup soy sauce, 3 cloves minced garlic, one lemon, 1 pound shrimp, 2 tablespoons butter",
+
+            "Thaw and peel shrimp, mince garlic, squeeze lemon, and start to boil water for brocolli.",
+
+            "In a small bowl, whisk honey, soy sauce, minced garlic, and lemon juice. Add half of sauce to shrimp and let marinate for 30 minutes. The other half of the sauce will be added later.", 
+
+            "Once water is boiling, add broccoli and cook for about 7-8 minutes or until brocolli starts to become tender. After brocolli is finished cooking, strain water and set to side.",
+
+            "In a medium skillet, heat to medium-high and add butter after pan becomes hot. After the butter is melted, add the shrimp and cook for about 2 minutes on each side until shrimp is pink. Once shrimp is pink, use tongs to remove shrimp from pan and heat the sauce until it starts to thicken to glaze. After sauce thickens, add back in shrimp and brocolli for about 3-4 minutes. Season shrimp and broccoli with salt and black pepper."
+        ],
+        "Time"      : 45,
+        "Healthy"   : 7,
+        "Category"  : ["Chinese", "Seafood"],
+        "Notes"     : ""
+    },
+
+    {
+        "Name" : "Cauliflower Pizza",
+        "Ingredients" : [
+            "Cauliflower Pizza"
+        ],
+        "Recipe" : [
+            "Follow directions on box."
+        ],
+        "Time"      : 25,
+        "Healthy"   : 6,
+        "Category"  : ["Vegetarian"],
+        "Notes"     : ""
+    },
+
+    {
+        "Name" : "Grilled Chicken and Asparagus",
+        "Ingredients" : [
+            "Chicken",
+            "Asparagus"
+        ],
+        "Recipe" : [
+            "Preheat grill to high, clean chicken and season (salt, black pepper, garlic salt, cajun), trim off ends of asparagus, and wrap asparagus in foil with oil",
+
+            "Cook asparagus on grill about 10 minutes before adding chicken"
+        ],
+        "Time"      : 40,
+        "Healthy"   : 6,
+        "Category"  : ["Chicken"],
+        "Notes"     : "Thaw chicken in refrigerator day before"
+    },
+
+    {
+        "Name" : "Steak and Green Beans",
+        "Ingredients" : [
+            "Steak",
+            "Green Beans"
+        ],
+        "Recipe"   : [],
+        "Time"     : 35,
+        "Healthy"  : 6,
+        "Category" : ["Steak"],
+        "Notes"    : "Thaw steak in refrigerator day before"
+    },
+
+    {
+        "Name"        : "Chicken Fajitas",
+        "Ingredients" : [],
+        "Recipe"      : [],
+        "Time"        : 25,
+        "Healthy"     : 6,
+        "Category"    : ["Mexican", "Chicken"],
+        "Notes"       : ""
+    },
+
+    {
+        "Name"        : "Chinese Stir Fry",
+        "Ingredients" : [],
+        "Recipe"      : [],
+        "Time"        : 10,
+        "Healthy"     : 10,
+        "Category"    : [],
+        "Notes"       : ""
+    },
+
+    {
+        "Name"        : "Buffalo Chicken Wrap",
+        "Ingredients" : [],
+        "Recipe"      : [],
+        "Time"        : 10,
+        "Healthy"     : 10,
+        "Category"    : [],
+        "Notes"       : ""
+    },
+
+    {
+        "Name"        : "Zoodles and Marinara",
+        "Ingredients" : [],
+        "Recipe"      : [],
+        "Time"        : 10,
+        "Healthy"     : 10,
+        "Category"    : [],
+        "Notes"       : ""
+    },
+
+    {
+        "Name"        : "Peas, Carrots, and Rice",
+        "Ingredients" : [],
+        "Recipe"      : [],
+        "Time"        : 10,
+        "Healthy"     : 10,
+        "Category"    : [],
+        "Notes"       : ""
+    },
+
+    {
+        "Name"        : "Chicken Alfredo",
+        "Ingredients" : [],
+        "Recipe"      : [],
+        "Time"        : 10,
+        "Healthy"     : 10,
+        "Category"    : [],
+        "Notes"       : ""
+    },
+
+    {
+        "Name"        : "Hamburgers",
+        "Ingredients" : [],
+        "Recipe"      : [],
+        "Time"        : 10,
+        "Healthy"     : 10,
+        "Category"    : [],
+        "Notes"       : ""
+    },
+
+    {
+        "Name"        : "Tuna Salad",
+        "Ingredients" : [],
+        "Recipe"      : [],
+        "Time"        : 10,
+        "Healthy"     : 10,
+        "Category"    : [],
+        "Notes"       : ""
+    },
+
+    {
+        "Name"        : "Southwest Tortellini Pasta Salad",
+        "Ingredients" : [],
+        "Recipe"      : [],
+        "Time"        : 10,
+        "Healthy"     : 10,
+        "Category"    : [],
+        "Notes"       : ""
+    },
+
+    {
+        "Name"        : "Chicken Lettuce Wraps",
+        "Ingredients" : [],
+        "Recipe"      : [],
+        "Time"        : 10,
+        "Healthy"     : 10,
+        "Category"    : [],
+        "Notes"       : ""
+    },
+
+    {
+        "Name"        : "Chicken Caprese",
+        "Ingredients" : [],
+        "Recipe"      : [],
+        "Time"        : 10,
+        "Healthy"     : 10,
+        "Category"    : [],
+        "Notes"       : ""
+    },
+
+    {
+        "Name"        : "Chicken Quesadillas",
+        "Ingredients" : [],
+        "Recipe"      : [],
+        "Time"        : 10,
+        "Healthy"     : 10,
+        "Category"    : [],
+        "Notes"       : ""
+    },
+
+    {
+        "Name"        : "Chili",
+        "Ingredients" : [],
+        "Recipe"      : [],
+        "Time"        : 10,
+        "Healthy"     : 10,
+        "Category"    : [],
+        "Notes"       : ""
+    },
+
+    {
+        "Name"        : "Spinach and Cheese Stuffed Chicken",
+        "Ingredients" : [],
+        "Recipe"      : [],
+        "Time"        : 10,
+        "Healthy"     : 10,
+        "Category"    : [],
+        "Notes"       : ""
+    },
+
+    {
+        "Name"        : "Chicken Carnitas Burrito Bowl",
+        "Ingredients" : [],
+        "Recipe"      : [],
+        "Time"        : 10,
+        "Healthy"     : 10,
+        "Category"    : [],
+        "Notes"       : ""
+    },
+
+    {
+        "Name"        : "Chicken, Bacon, Avocado, Ranch Lettuce Wraps",
+        "Ingredients" : [],
+        "Recipe"      : [],
+        "Time"        : 10,
+        "Healthy"     : 10,
+        "Category"    : [],
+        "Notes"       : ""
+    },
+
+    {
+        "Name" : "Shrimp Tacos",
+        "Ingredients" : [
+            "Cilantro"
+        ],
+        "Recipe"   : [],
+        "Time"     : 10,
+        "Healthy"  : 10,
+        "Category" : [],
+        "Notes"    : ""
+    },
+
+    {
+        "Name"        : "Baked Honey Garlic Salmon",
+        "Ingredients" : [],
+        "Recipe"      : [],
+        "Time"        : 10,
+        "Healthy"     : 10,
+        "Category"    : [],
+        "Notes"       : ""
+    }
+]
