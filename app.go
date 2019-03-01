@@ -18,7 +18,7 @@ import (
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"github.com/mongodb/mongo-go-driver/bson/primitive"
-    "github.com/mongodb/mongo-go-driver/mongo/options"
+    	"github.com/mongodb/mongo-go-driver/mongo/options"
 
 )
 
@@ -67,7 +67,7 @@ func isMember(array[]int, n int) bool {
 
 // randomInts generates a random selection of integers
 func randomInts(total, n int) []int {
-	// Define random number generator and permute integers
+    // Define random number generator and permute integers
     r := rand.New(rand.NewSource(time.Now().UnixNano()))
     p := r.Perm(int(total))
 	return p[:n]
@@ -76,7 +76,7 @@ func randomInts(total, n int) []int {
 
 // configureEmail creates a keyring entry for a specified username and password
 func configureEmail(service, user, password string){
-	// Set or override password
+    // Set or override password
     err := keyring.Set(service, user, password)
     if err != nil {
         log.Fatal(err)
@@ -108,7 +108,6 @@ func connectMongoDB(ctx context.Context, mongoURI string) *mongo.Collection {
 
 // formatAsHTML formats recipes and grocery list as HTML that will be used in e-mail
 func formatAsHTML() string{
-
 	// Convert recipes to HTML table
 	templateHTML := 
 		`<!DOCTYPE html>
@@ -210,7 +209,6 @@ CORE APP
 
 // selectRecipes selects recipes for the week and generates grocery list
 func selectRecipes(nRecipes int){
-
 	// Configure MongoDB
 	ctx         := context.TODO()
 	findOptions := options.Find()
@@ -262,7 +260,6 @@ func selectRecipes(nRecipes int){
 
 // main runs app
 func main(){
-	
 	// If > 1 argument passed and --configure string passed, set/reset password
 	// NOTE: For now this is the poor man's way to obtain a 'flag' from command line
 	cli := os.Args
