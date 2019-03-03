@@ -3,6 +3,8 @@ package main
 // Imports
 import (
 	"context"
+	"encoding/json"
+	"io/ioutil"
 	"log"
 	"math/rand"
 	"net/smtp"
@@ -13,24 +15,24 @@ import (
 
 	"github.com/howeyc/gopass"
 	"github.com/deckarep/golang-set"
-	"github.com/zalando/go-keyring"
-
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"github.com/mongodb/mongo-go-driver/bson/primitive"
     "github.com/mongodb/mongo-go-driver/mongo/options"
-
 )
 
 // Constants
 const (
-	userName string = "rjmilletich@gmail.com"
-	service  string = "my-app"
 	mongoURI string = "mongodb://localhost:27017"
 	nRecipes int    = 7
 )
 
-// SingleRecipe is a struct contains information for single recipe in MongoDB
+// EmailConfig is a struct that contains information for configuring emails
+type EmailConfig struct {
+	User, Password string
+}
+
+// SingleRecipe is a struct that contains information for single recipe in MongoDB
 type SingleRecipe struct {
 	ID            primitive.ObjectID `bson:"_id,omitempty"`      
 	Name          string             `json:"Name" bson:"Name"`
@@ -74,14 +76,23 @@ func randomInts(total, n int) []int {
 }
 
 
-// configureEmail creates a keyring entry for a specified username and password
-func configureEmail(service, user, password string){
-	// Set or override password
-    err := keyring.Set(service, user, password)
+// configureEmail creates a json file for a specified username and password
+func configureEmail(user, password string){
+	// Define data
+	data := EmailConfig {
+		User     : user,
+		Password : password,
+	}
+	// Create file and write to disk
+	file, err := json.MarshalIndent(data, "", " ")
     if err != nil {
-        log.Fatal(err)
-    } else {
-		log.Printf("Successfully set password for user %v and %v service", user, service)
+        log.Fatal("Error creating e-mail configuration file because ", err)
+	}
+	err = ioutil.WriteFile(".emailConfig.json", file, 0644)
+	if err != nil {
+		log.Fatal("Error writing e-mail configuration file because ", err)
+	} else {
+		log.Printf("Successfully set e-mail configuration file for user %v", user)
 	}
 }
 
@@ -181,22 +192,33 @@ func formatAsHTML() string{
 
 
 // sendEmail sends an e-mail containing recipes and grocery list to specified user
-func sendEmail(body string){
-	// Get current time and password from keyring
-	currentTime   := time.Now().AddDate(0, 0, 1).Format("01-02-2006")
-	password, err := keyring.Get(service, userName)
+func sendEmail(body string){	
+	// Load e-mail configuration data
+	jsonFile, err  := os.Open(".emailConfig.json")
+	if err != nil {
+		log.Fatal("Error opening e-mail configuration file because ", err)
+	}
+	byteValue, err := ioutil.ReadAll(jsonFile)
+	if err != nil {
+		log.Fatal("Error reading e-mail configuration file because ", err)
+	}
 
+	// Load data from json file
+	var emailConfig EmailConfig
+	json.Unmarshal(byteValue, &emailConfig)
+	
 	// Define contents
-	addr    := "smtp.gmail.com:587"
-	mime    := "MIME-version: 1.0;\nContent-Type: text/html; charset=\"UTF-8\";\n\n"
-	subject := "Subject: Recipes and grocery list for week of " + currentTime +"\n"
-	msg     := []byte(subject + mime + "\n" + body)
+	currentTime := time.Now().AddDate(0, 0, 1).Format("01-02-2006")
+	addr        := "smtp.gmail.com:587"
+	mime        := "MIME-version: 1.0;\nContent-Type: text/html; charset=\"UTF-8\";\n\n"
+	subject     := "Subject: Recipes and grocery list for week of " + currentTime +"\n"
+	msg         := []byte(subject + mime + "\n" + body)
 
 	// Send message
 	err = smtp.SendMail(addr,
-		                smtp.PlainAuth("", userName, password, "smtp.gmail.com"),
-						userName, 
-						[]string{userName}, 
+		                smtp.PlainAuth("", emailConfig.User, emailConfig.Password, "smtp.gmail.com"),
+						emailConfig.User, 
+						[]string{emailConfig.User}, 
 						msg)
 	if err != nil {
 		log.Fatalf("SMTP Error: %s", err)
@@ -263,20 +285,26 @@ func selectRecipes(nRecipes int){
 // main runs app
 func main(){
 	
-	// If > 1 argument passed and --configure string passed, set/reset password
+	// If > 1 argument passed and --configure string passed, set/reset e-mail configuration
 	// NOTE: For now this is the poor man's way to obtain a 'flag' from command line
 	cli := os.Args
 	if len(cli) > 1 && cli[1] == "--configure" {
-		// Delete password if already provided
-		keyring.Delete(service, "userName")
 		
-		// Set password
+		// Set user, and password
+		log.Printf("User: ")
+		user, err := gopass.GetPasswdMasked()
+		if err != nil {
+			log.Fatal("Error setting user to configure e-mail")
+		}
 		log.Printf("Password: ")
 		password, err := gopass.GetPasswdMasked()
 		if err != nil {
 			log.Fatal("Error setting password to configure e-mail")
 		}
-		configureEmail(service, userName, string(password[:]))
+
+		// Create e-mail configuration file and exit program
+		configureEmail(string(user), string(password))
+		os.Exit(0)
 	}
 
 	// Select recipes

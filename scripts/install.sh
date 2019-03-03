@@ -5,29 +5,30 @@
 #####
 
 # General updates
-sudo yum update
+sudo yum -y update
 
 # Install go
-sudo yum install -y go
+sudo yum install -y golang
 
 # Install MongoDB
-sudo mv ../assets/mongodb-org-4.0.repo /etc/yum.repos.d/mongodb-org-4.0.repo
+sudo mv assets/mongodb-org-4.0.repo /etc/yum.repos.d/mongodb-org-4.0.repo
 sudo yum install -y mongodb-org
 
 # Clone milly-menu repo
 cd ~/
-mkdir /home/ec2-user/go/src/github.com/rmill040
-mv milly-menu /home/ec2-user/go/src/github.com/rmill040/milly-menu
+sudo mkdir -p /home/ec2-user/go/src/github.com/rmill040
+sudo mv milly-menu /home/ec2-user/go/src/github.com/rmill040/milly-menu
 cd /home/ec2-user/go/src/github.com/rmill040/milly-menu
 
-go get -d ./...
+# Install dependencies and build
+go get
 go build
 ./milly-menu --configure
-chmod 755 scripts/run.sh
+chmod 755 scripts/*.sh
 
 # Define cronjob for every Saturday at 8:00AM
 # First write out current crontab
-crontab -l > mycron
+crontab -l 2>/dev/null
 
 # Echo new cron into cron file
 echo "0 8 * * 6 ./scripts/run.sh" >> mycron

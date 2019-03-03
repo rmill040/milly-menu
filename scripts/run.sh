@@ -15,6 +15,10 @@ echo "Pulling latest version of code and data from GitHub"
 cd /home/ec2-user/go/src/github.com/rmill040/milly-menu
 git pull origin master
 
+# Clean and then rebuild
+go clean
+go build
+
 # Push .json data to MongoDB
 echo "Pushing recipes data into MongoDB"
 mongoimport --db recipes --collection all assets/data.json --jsonArray
@@ -23,7 +27,7 @@ mongoimport --db recipes --collection all assets/data.json --jsonArray
 echo "Running Go script"
 ./milly-menu
 
-# Clean up directories and kill mongod process
+# Kill mongod process and clean up
 echo "Finished, cleaning up and killing mongod"
-rm -rf ~/db
 pkill mongod
+rm -rf ~/db
