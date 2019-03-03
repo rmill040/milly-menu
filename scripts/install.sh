@@ -16,8 +16,8 @@ sudo yum install -y mongodb-org
 
 # Clone milly-menu repo
 cd ~/
-sudo mkdir -p /home/ec2-user/go/src/github.com/rmill040
-sudo mv milly-menu /home/ec2-user/go/src/github.com/rmill040/milly-menu
+mkdir -p /home/ec2-user/go/src/github.com/rmill040
+mv milly-menu /home/ec2-user/go/src/github.com/rmill040/milly-menu
 cd /home/ec2-user/go/src/github.com/rmill040/milly-menu
 
 # Install dependencies and build
