@@ -31,7 +31,7 @@ chmod 755 scripts/*.sh
 crontab -l 2>/dev/null
 
 # Echo new cron into cron file
-echo "0 8 * * 6 ./scripts/run.sh" >> mycron
+echo "0 8 * * 6 sh /home/ec2-user/go/src/github.com/rmill040/milly-menu/scripts/run.sh" >> mycron
 
 # Install new cron file and then remove
 crontab mycron
