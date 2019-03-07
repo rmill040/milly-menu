@@ -7,7 +7,7 @@
             "Honey",
             "Soy Sauce",
             "Garlic",
-            "Lemon",
+            "Lemons",
             "Butter"
         ],
         "Recipe" : [
@@ -21,10 +21,10 @@
 
             "In a medium skillet, heat to medium-high and add butter after pan becomes hot. After the butter is melted, add the shrimp and cook for about 2 minutes on each side until shrimp is pink. Once shrimp is pink, use tongs to remove shrimp from pan and heat the sauce until it starts to thicken to glaze. After sauce thickens, add back in shrimp and brocolli for about 3-4 minutes. Season shrimp and broccoli with salt and black pepper."
         ],
-        "Time"      : 45,
-        "Healthy"   : 7,
-        "Category"  : ["Chinese", "Seafood"],
-        "Notes"     : ""
+        "Time"     : 45,
+        "Healthy"  : 7,
+        "Category" : ["Chinese", "Seafood"],
+        "Notes"    : ""
     },
 
     {
@@ -35,10 +35,10 @@
         "Recipe" : [
             "Follow directions on box."
         ],
-        "Time"      : 25,
-        "Healthy"   : 6,
-        "Category"  : ["Vegetarian"],
-        "Notes"     : ""
+        "Time"     : 25,
+        "Healthy"  : 6,
+        "Category" : ["Vegetarian"],
+        "Notes"    : ""
     },
 
     {
@@ -52,10 +52,10 @@
 
             "Cook asparagus on grill about 10 minutes before adding chicken"
         ],
-        "Time"      : 40,
-        "Healthy"   : 6,
-        "Category"  : ["Chicken"],
-        "Notes"     : "Thaw chicken in refrigerator day before"
+        "Time"     : 40,
+        "Healthy"  : 6,
+        "Category" : ["Chicken"],
+        "Notes"    : "Thaw chicken in refrigerator day before"
     },
 
     {
@@ -73,12 +73,17 @@
 
     {
         "Name"        : "Chicken Fajitas",
-        "Ingredients" : [],
-        "Recipe"      : [],
-        "Time"        : 25,
-        "Healthy"     : 6,
-        "Category"    : ["Mexican", "Chicken"],
-        "Notes"       : ""
+        "Ingredients" : [
+            "Chicken",
+            "Onions",
+            "Peppers",
+            "Tortilla Wraps"
+        ],
+        "Recipe"   : [],
+        "Time"     : 25,
+        "Healthy"  : 6,
+        "Category" : ["Mexican", "Chicken"],
+        "Notes"    : "Thaw chicken in refrigerator day before"
     },
 
     {
@@ -87,7 +92,7 @@
         "Recipe"      : [],
         "Time"        : 10,
         "Healthy"     : 10,
-        "Category"    : [],
+        "Category"    : ["Chinese"],
         "Notes"       : ""
     },
 
@@ -97,7 +102,7 @@
         "Recipe"      : [],
         "Time"        : 10,
         "Healthy"     : 10,
-        "Category"    : [],
+        "Category"    : ["Chicken"],
         "Notes"       : ""
     },
 
@@ -107,7 +112,7 @@
         "Recipe"      : [],
         "Time"        : 10,
         "Healthy"     : 10,
-        "Category"    : [],
+        "Category"    : ["Vegetarian"],
         "Notes"       : ""
     },
 
@@ -117,7 +122,7 @@
         "Recipe"      : [],
         "Time"        : 10,
         "Healthy"     : 10,
-        "Category"    : [],
+        "Category"    : ["Vegetarian"],
         "Notes"       : ""
     },
 
@@ -127,7 +132,7 @@
         "Recipe"      : [],
         "Time"        : 10,
         "Healthy"     : 10,
-        "Category"    : [],
+        "Category"    : ["Italian", "Chicken"],
         "Notes"       : ""
     },
 
@@ -137,7 +142,7 @@
         "Recipe"      : [],
         "Time"        : 10,
         "Healthy"     : 10,
-        "Category"    : [],
+        "Category"    : ["Beef"],
         "Notes"       : ""
     },
 
@@ -147,7 +152,7 @@
         "Recipe"      : [],
         "Time"        : 10,
         "Healthy"     : 10,
-        "Category"    : [],
+        "Category"    : ["Seafood"],
         "Notes"       : ""
     },
 
@@ -167,7 +172,7 @@
         "Recipe"      : [],
         "Time"        : 10,
         "Healthy"     : 10,
-        "Category"    : [],
+        "Category"    : ["Chicken"],
         "Notes"       : ""
     },
 
@@ -177,7 +182,7 @@
         "Recipe"      : [],
         "Time"        : 10,
         "Healthy"     : 10,
-        "Category"    : [],
+        "Category"    : ["Italian", "Chicken"],
         "Notes"       : ""
     },
 
@@ -187,7 +192,7 @@
         "Recipe"      : [],
         "Time"        : 10,
         "Healthy"     : 10,
-        "Category"    : [],
+        "Category"    : ["Mexican", "Chicken"],
         "Notes"       : ""
     },
 
@@ -197,7 +202,7 @@
         "Recipe"      : [],
         "Time"        : 10,
         "Healthy"     : 10,
-        "Category"    : [],
+        "Category"    : ["Beef"],
         "Notes"       : ""
     },
 
@@ -207,7 +212,7 @@
         "Recipe"      : [],
         "Time"        : 10,
         "Healthy"     : 10,
-        "Category"    : [],
+        "Category"    : ["Chicken"],
         "Notes"       : ""
     },
 
@@ -217,7 +222,7 @@
         "Recipe"      : [],
         "Time"        : 10,
         "Healthy"     : 10,
-        "Category"    : [],
+        "Category"    : ["Mexican", "Chicken"],
         "Notes"       : ""
     },
 
@@ -227,29 +232,78 @@
         "Recipe"      : [],
         "Time"        : 10,
         "Healthy"     : 10,
-        "Category"    : [],
+        "Category"    : ["Chicken"],
         "Notes"       : ""
     },
 
     {
         "Name" : "Shrimp Tacos",
         "Ingredients" : [
-            "Cilantro"
+            "Cilantro",
+            "Shrimp",
+            "Tortilla Wraps"
         ],
         "Recipe"   : [],
         "Time"     : 10,
         "Healthy"  : 10,
-        "Category" : [],
+        "Category" : ["Seafood"],
         "Notes"    : ""
     },
 
     {
-        "Name"        : "Baked Honey Garlic Salmon",
-        "Ingredients" : [],
-        "Recipe"      : [],
-        "Time"        : 10,
-        "Healthy"     : 10,
-        "Category"    : [],
-        "Notes"       : ""
+        "Name" : "Baked Honey Garlic Salmon",
+        "Ingredients" : [
+            "Salmon",
+            "Broccoli"
+        ],
+        "Recipe"   : [],
+        "Time"     : 30,
+        "Healthy"  : 7,
+        "Category" : ["Seafood"],
+        "Notes"    : "Thaw salmon in refrigerator day before"
+    },
+
+    {
+        "Name" : "Kafta",
+        "Ingredients" : [
+            "Parsley",
+            "Onions",
+            "Ground Beef"
+        ],
+        "Recipe"   : [],
+        "Time"     : 10,
+        "Healthy"  : 6,
+        "Category" : ["Lebanese", "Beef"],
+        "Notes"    : "Thaw ground beef in refrigerator day before"
+    },
+
+    {
+        "Name" : "Chicken Parmesan",
+        "Ingredients" : [
+            "Bread Crumbs",
+            "Chicken",
+            "Pasta",
+            "Marinara Sauce",
+            "Cheese"
+        ],
+        "Recipe"   : [],
+        "Time"     : 30,
+        "Healthy"  : 6,
+        "Category" : ["Italian", "Chicken"],
+        "Notes"    : "Thaw chicken in refrigerator day before"
+    },
+
+    {
+        "Name" : "BBQ Sandwiches",
+        "Ingredients" : [
+            "BBQ",
+            "Hamburger Buns"
+        ],
+        "Recipe"   : [],
+        "Time"     : 20,
+        "Healthy"  : 6,
+        "Category" : ["Pork"],
+        "Notes"    : ""
     }
+
 ]

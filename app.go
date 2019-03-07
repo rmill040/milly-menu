@@ -50,7 +50,6 @@ var Recipes = make(map[int]SingleRecipe)
 // GroceryList holds ingredients from selected recipes
 var GroceryList = mapset.NewSet()
 
-
 /***************
 HELPER FUNCTIONS
 ****************/
@@ -282,8 +281,14 @@ func selectRecipes(nRecipes int){
 
 // main runs app
 func main(){
+
+    // Set log file
+    logger, _ := os.OpenFile("log_" + time.Now().Format("01-02-2006") + ".txt",
+                              os.O_RDWR | os.O_CREATE, 
+                              0666)
+    log.SetOutput(logger)
+
     // If > 1 argument passed and --configure string passed, set/reset e-mail configuration
-    // NOTE: For now this is the poor man's way to obtain a 'flag' from command line
     cli := os.Args
     if len(cli) > 1 && cli[1] == "--configure" {
         
