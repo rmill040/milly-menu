@@ -15,9 +15,9 @@
 
             "Thaw and peel shrimp, mince garlic, squeeze lemon, and start to boil water for brocolli.",
 
-            "In a small bowl, whisk honey, soy sauce, minced garlic, and lemon juice. Add half of sauce to shrimp and let marinate for 30 minutes. The other half of the sauce will be added later.", 
+            "In a small bowl, whisk honey, soy sauce, minced garlic, and lemon juice. Add less than half of sauce to shrimp and let marinate for 30 minutes. The rest of the sauce will be added later.", 
 
-            "Once water is boiling, add broccoli and cook for about 7-8 minutes or until brocolli starts to become tender. After brocolli is finished cooking, strain water and set to side.",
+            "Once water is boiling, add broccoli and cook for about 6 minutes or until brocolli starts to become tender. After brocolli is finished cooking, strain water and set to side.",
 
             "In a medium skillet, heat to medium-high and add butter after pan becomes hot. After the butter is melted, add the shrimp and cook for about 2 minutes on each side until shrimp is pink. Once shrimp is pink, use tongs to remove shrimp from pan and heat the sauce until it starts to thicken to glaze. After sauce thickens, add back in shrimp and brocolli for about 3-4 minutes. Season shrimp and broccoli with salt and black pepper."
         ],
@@ -50,7 +50,7 @@
         "Recipe" : [
             "Preheat grill to high, clean chicken and season (salt, black pepper, garlic salt, cajun), trim off ends of asparagus, and wrap asparagus in foil with oil",
 
-            "Cook asparagus on grill about 10 minutes before adding chicken"
+            "Cook asparagus on grill for about 10 minutes before adding chicken"
         ],
         "Time"     : 40,
         "Healthy"  : 6,
@@ -241,11 +241,19 @@
         "Ingredients" : [
             "Cilantro",
             "Shrimp",
-            "Tortilla Wraps"
+            "Tortilla Wraps",
+            "Cheese",
+            "Mayonnaise",
+            "Sour Cream",
+            "Sriracha",
+            "Cabbage",
+            "Radish"
         ],
-        "Recipe"   : [],
-        "Time"     : 10,
-        "Healthy"  : 10,
+        "Recipe"   : [
+            "https://pinchandswirl.com/shrimp-tacos/"
+        ],
+        "Time"     : 30,
+        "Healthy"  : 7,
         "Category" : ["Seafood"],
         "Notes"    : ""
     },
